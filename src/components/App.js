@@ -11,7 +11,7 @@ const handletodo =()=>{
 
    if (inputodo.trim() !== "") {
       setTodo([...todo, inputodo]);
-      setInputtodo(""); // clear input after adding
+      setInputtodo(""); 
     }
 
 
@@ -36,7 +36,9 @@ const deletetodo = (indexToDelete) => {
         {
           todo.map((item,index)=>(
             <div key={index}>
+              <ul>
               <li>{item} </li>
+              </ul>
               <button onClick={() => deletetodo(index)}>Delete</button>
             </div>
 
