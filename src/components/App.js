@@ -32,21 +32,19 @@ const deletetodo = (indexToDelete) => {
 
         <input type="text"  value={inputodo} onChange={(e)=>setInputtodo(e.target.value)}></input>
         <button onClick={handletodo}>Add Todo</button>
-
+<ul>
         {
           todo.map((item,index)=>(
-            <div key={index}>
-              <ul>
-              <li>{item} </li>
-              </ul>
-              <button onClick={() => deletetodo(index)}>Delete</button>
-            </div>
-
-          )
-          )
-
           
+              
+              <li key={index}>{item} 
+              <button onClick={() => deletetodo(index)}>Delete</button>
+              </li>
+          )
+          )  
         }
+
+        </ul>
     </div>
   )
 }
